@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <!-- <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}"> -->
+    <title>Home</title>
+    <style>
+    body,
+    html {
+      overflow-x: hidden
+    }
+
+    body {
+      padding: 60px 20px 0
+    }
+
+    footer {
+      border-top: 1px solid #ddd;
+      padding: 30px;
+      margin-top: 50px
+    }
+
+    .row>[class*=col-] {
+      margin-bottom: 40px
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h1>Negative Comment Classifier</h1> 
+                <p>A machine learning web application that classifes texts/comments based on
+                            their level of negativity
+                </p> 
+            </div>
+        </div>
+
+        <div class="container-fluid">
+            <div class="row">
+                <!-- kolom untuk navigasi -->
+                <div class="col-lg-3"> 
+                    <ul class="nav nav-tabs nav-stacked">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Classifier</a></li>
+                        <li><a href="#">Data</a></li>
+                        <li><a href="#">About</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-9" data-effect="slide-right"> 
+                    <div class="row">
+                        <form class="form-horizontal">
+                            <div class="form-group">
+                                <label for="Textarea" class="col-lg-2 control-label">Comment/Text</label>
+                                <div class="col-lg-10">
+                                    <textarea class="form-control" id="Textarea" rows="5" placeholder="Write something here..."></textarea>
+                                </div>
+                            </div>
+                            <div class="form-inline form-group">
+                                <label for="categorySelect" class="col-lg-2 control-label">Category</label>
+                                    <div class="col-lg-8">
+                                        <select style="width: 100%; height: 50px" class="selectpicker show-tick form-control" id="categorySelect">
+                                            <option>All</option>
+                                            <option>Toxic</option>
+                                            <option>Severe toxic</option>
+                                            <option>Obscene</option>
+                                            <option>Threat</option>
+                                            <option>Insult</option>
+                                            <option>Identity hate</option>
+                                        </select>   
+                                    </div>
+                                    <div class="col-lg-2">
+                                        <button style="width: 100%; height: 50px" type="submit" class="btn btn-primary">Predict</button>
+                                    </div>
+                            </div>
+                        </form>
+                    </div>
+                </br>
+                    <div class="row">
+                              <div class="well well-lg">
+                                Look, I'm in a well!
+                              </div>
+                    </div>
+                    <!-- detail panel -->
+                    <div class="row">
+                        <div class="panel-group">
+                            <div class="panel panel-info">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" href="#collapse1">See detailed analysis</a>
+                                    </h4>
+                                </div>
+                                <div id="collapse1" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <p>
+                                                hello i am a collapse panel
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>         
+                </div>
+            </div>
+        </div>
+        </div>
+
+    <footer class="container-fluid text-center">
+        <p>Footer Text</p>
+    </footer>
+</body>
+</html>
