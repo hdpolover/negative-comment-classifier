@@ -1,0 +1,55 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="row">
+    <form class="form-horizontal">
+        <div class="form-group">
+            <label for="Textarea" class="col-lg-2 control-label">Comment/Text</label>
+            <div class="col-lg-10">
+                <textarea class="form-control" id="Textarea" rows="5" placeholder="Write something here..."></textarea>
+            </div>
+        </div>
+        <div class="form-inline form-group">
+            <label for="categorySelect" class="col-lg-2 control-label">Category</label>
+                <div class="col-lg-8">
+                    <select style="width: 100%; height: 30%" class="selectpicker show-tick form-control" id="categorySelect">
+                        <option>All</option>
+                        <option>Toxic</option>
+                        <option>Severe toxic</option>
+                        <option>Obscene</option>
+                        <option>Threat</option>
+                        <option>Insult</option>
+                        <option>Identity hate</option>
+                    </select>   
+                </div>
+                <div class="col-lg-2">
+                    <button style="width: 100%; height: 30%" type="submit" class="btn btn-primary">Predict</button>
+                </div>
+        </div>
+    </form>
+</div>
+</br>
+<div class="row">
+          <div class="well well-info">
+            Look, I'm in a well!
+          </div>
+</div>
+<!-- detail panel -->
+<div class="row">
+    <div class="panel-group">
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" href="#collapse1">See detailed analysis</a>
+                </h4>
+            </div>
+            <div id="collapse1" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <p>
+                            hello i am a collapse panel
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
