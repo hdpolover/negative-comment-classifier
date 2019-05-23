@@ -3,7 +3,7 @@ from flask import Flask, render_template, url_for, request, redirect
 #import classifier.py
 from classifier import pred
 
-app = Flask(_name_)
+app = Flask(__name__)
 
 @app.route("/")
 def home():
@@ -19,17 +19,23 @@ def predi():
         comment_text = request.form['txt']
         choice = request.form['choice']
 
+        #category to print
+        cat = ['toxic', 'severe toxic', 'obscene', 'threat', 'insult', 'identity hate', 'negative']
+        #cast to int
+        index = int(choice)
+
         if choice == "6":
             pr0, pr1, pr2, pr3, pr4, pr5,
             pa0, pa1, pa2, pa3, pa4, pa5 = pred(comment_text, choice)
 
-            return render_template('result.html', comment = comment_text, pr0 = pr0, pr1 = pr1, 
-            pr2 = pr2, pr3 = pr3, pr4 = pr4, pr5 = pr5, pa0 = pa0, pa1 = pa1, 
-            pa2 = pa2, pa3 = pa3, pa4 = pa4, pa5 = pa5)
+            return render_template('result.html', comment = comment_text, category = cat[index],
+            pr0 = pr0, pr1 = pr1, pr2 = pr2, pr3 = pr3, pr4 = pr4, pr5 = pr5, 
+            pa0 = pa0, pa1 = pa1, pa2 = pa2, pa3 = pa3, pa4 = pa4, pa5 = pa5)
         else:
             pr0, pa0 = pred(comment_text, choice)
 
-            return render_template('result.html', comment = comment_text, pr0 = pr0, pa0 = pa0)
+            return render_template('result.html', comment = comment_text, category = cat[index],
+            pr0 = pr0, pa0 = pa0)
 
 @app.route("/about")
 def about():
@@ -39,5 +45,5 @@ def about():
 def view():
     return render_template('view.html')
 
-if _name_ == '_main_':
+if __name__ == '__main__':
 	app.run(debug=True)
