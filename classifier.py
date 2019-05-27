@@ -48,13 +48,18 @@ def predAll(text):
         # add each category accuracy to the list
         pa.append(accuracy_result)
 
-    return pr[0], pr[1], pr[2], pr[3], pr[4], pr[5]
-    #   return pr[0], pr[1], pr[2], pr[3], pr[4], pr[5], pa[0], pa[1], pa[2],
-    # pa[3], pa[4], pa[5]
+    # create a new list
+    retPr = []
+    # copy list to a new one
+    retPr = pr.copy()
+    # clear pr elements
+    pr.clear()
+
+    return retPr[0], retPr[1], retPr[2], retPr[3], retPr[4], retPr[5]
 
 
 def pred(text, choice):
-        # input text
+    # input text
     data = [text]
     vector = vect.transform(data).toarray()
 
