@@ -8,34 +8,28 @@ Team members:
 
 ## Langkah Pembuatan Program:
 
-1 - Data Collection
+*  Data Collection
+Aplikasi ini menggunakan pre-collected toxic comment dataset dari [Kaggle](https://www.kaggle.com/nichaoku/toxic-comment-merge-train-and-test-with-label).
 
-Program ini menggunakan pre-collected toxic comment dataset
-
-2 - Data Preparation
-
+* Data Preparation
 Melakukan analisa awal dengan melihat isi baris dan kolom dari data untuk menentukan atribut mana yang cocok digunakan sebagai parameter. Kemudian membagi data ke dalam atribut dan label. Setelah itu membagi data ke dalam training dan test set.
 
-3 - Choose a Model
+* Choosing a Model
+Menentukan algoritma apa yang akan digunakan untuk mengklasifikasi dataset. Aplikasi ini menggunakan algoritma SVM, Karena algoritma ini bisa mengklasifikasikan data dengan baik dan cepat.
 
-Menentukan algoritma apa yang akan digunakan untuk mengklasifikasi dataset. Program ini menggunakan algoritma SVM, Karena algoritma ini bisa mengklasifikasikan data dengan baik dan cepat.
-
-4 - Train the Model
-
+* Training the Model
 Melakukan training atau memberi pengetahuan terhadap algoritma sebelum bisa melakukan prediksi.
 
-5 - Evaluate the Model
-
+* Evaluating the Model
 Menggunakan data sample modifikasi dari training set untuk melakukan evaluasi terhadap efektifitas dan efesiensi dari algoritma yang dipilih. Seperti tingkat akurasi dan lama pemrosesan. 
 
-6 - Make Predictions
-
+* Making Predictions
 Membuat prediksi nyata dengan menggunakan sampel dari test set atau data yang tidak termasuk dalam training set.
 
 ## Library Yang Dibutuhkan:
 
-1. pandas			      : mengolah dataset menjadi table dataframe yang bisa dibaca
-2. TfidfVectorizer	: mengubah dataset menjadi vector agar bisa digunakan sebagai input untuk proses prediksi.
-3. train_test_split	: membagi dataset kedalam Training Set dan Test Set serta meminimalisir overfitting atau underfitting dengan mengacak dataset.
-4. LinearSVC		    : algoritma untuk mengklasifikasi dan memprediksi data. LinearSVC dipilih karena proses eksekusinya lebih cepat dan mampu memisahkan data dengan baik 
-5. accuracy_score	  : menghitung akurasi dari hasil prediksi
+* [Pandas](https://pandas.pydata.org/)            : untuk mengolah dataset menjadi table dataframe yang bisa dibaca.
+* [TfidfVectorizer](https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.TfidfVectorizer.html)   : untuk mengubah dataset menjadi vector agar bisa digunakan sebagai input untuk proses prediksi.
+* [Train_test_split](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html)	: untuk membagi dataset kedalam Training Set dan Test Set serta meminimalisir overfitting atau underfitting dengan mengacak dataset.
+* [LinearSVC](https://scikit-learn.org/stable/modules/generated/sklearn.svm.LinearSVC.html)		    : algoritma untuk mengklasifikasi dan memprediksi data. LinearSVC dipilih karena proses eksekusinya lebih cepat dan mampu memisahkan data dengan baik. 
+* [Accuracy_score](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.accuracy_score.html)    : untuk menghitung akurasi dari hasil prediksi. 
