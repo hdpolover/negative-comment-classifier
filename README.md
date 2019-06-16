@@ -19,3 +19,7 @@ Melakukan analisa awal dengan melihat isi baris dan kolom dari data untuk menent
 3 - Choose a Model
 
 Menentukan algoritma apa yang akan digunakan untuk mengklasifikasi dataset. Program ini menggunakan algoritma SVM, Karena algoritma ini bisa mengklasifikasikan data dengan baik dan cepat.
+
+4 - Train the Model
+
+Melakukan training atau memberi pengetahuan terhadap algoritma sebelum bisa melakukan prediksi.
