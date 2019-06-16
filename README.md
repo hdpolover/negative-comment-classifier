@@ -11,3 +11,7 @@ Team members:
 1 - Data Collection
 
 Program ini menggunakan pre-collected toxic comment dataset
+
+2 - Data Preparation
+
+Melakukan analisa awal dengan melihat isi baris dan kolom dari data untuk menentukan atribut mana yang cocok digunakan sebagai parameter. Kemudian membagi data ke dalam atribut dan label. Setelah itu membagi data ke dalam training dan test set.
