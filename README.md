@@ -6,7 +6,7 @@ Team members:
 - 171111036	-- Nurami Nasrullah
 - 171111069	-- Qori Hidayatulloh
 
-# Langkah Pembuatan Program:
+## Langkah Pembuatan Program:
 
 1 - Data Collection
 
@@ -30,4 +30,11 @@ Menggunakan data sample modifikasi dari training set untuk melakukan evaluasi te
 
 6 - Make Predictions
 
+## Library Yang Dibutuhkan:
 Membuat prediksi nyata dengan menggunakan sampel dari test set atau data yang tidak termasuk dalam training set.
+
+1. pandas			      : mengolah dataset menjadi table dataframe yang bisa dibaca
+2. TfidfVectorizer	: mengubah dataset menjadi vector agar bisa digunakan sebagai input untuk proses prediksi.
+3. train_test_split	: membagi dataset kedalam Training Set dan Test Set serta meminimalisir overfitting atau underfitting dengan mengacak dataset.
+4. LinearSVC		    : algoritma untuk mengklasifikasi dan memprediksi data. LinearSVC dipilih karena proses eksekusinya lebih cepat dan mampu memisahkan data dengan baik 
+5. accuracy_score	  : menghitung akurasi dari hasil prediksi
