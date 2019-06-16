@@ -27,3 +27,7 @@ Melakukan training atau memberi pengetahuan terhadap algoritma sebelum bisa mela
 5 - Evaluate the Model
 
 Menggunakan data sample modifikasi dari training set untuk melakukan evaluasi terhadap efektifitas dan efesiensi dari algoritma yang dipilih. Seperti tingkat akurasi dan lama pemrosesan. 
+
+6 - Make Predictions
+
+Membuat prediksi nyata dengan menggunakan sampel dari test set atau data yang tidak termasuk dalam training set.
