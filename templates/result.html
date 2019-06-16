@@ -2,6 +2,7 @@
 {% block content %}
 <div class="row">
     <div class="well well-info">
+<<<<<<< HEAD
         {% if category[0] == "i" %}
         {% set identifier = "an" %}
         {% elif category[0] == "o" %}
@@ -16,6 +17,14 @@
             {% else %}
             {{ identifier }} <span style="color: red"><b>{{ category }}</b></span>
             {% endif %} comment.
+=======
+        <p>"{{ comment }}" is
+            {% if res == 0%}
+            not a/an {{ category}}
+            {% else %}
+            a/an {{ category }}
+            {% endif %} comment. {{ res }}
+>>>>>>> 251e2cf68475e8ebb27af2184b9b5ce712d4b517
         </p>
     </div>
 </div>
@@ -38,5 +47,10 @@
         </div>
     </div>
 </div>
+<<<<<<< HEAD
 <a href="{{url_for('clf')}}" style="width: 20%; height:80%" class="btn btn-primary">Return</a>
 {% endblock %}
+=======
+<button type="button" class="btn btn-info"><a href="{{url_for('clf')}}">Return</a></button>
+{% endblock %}
+>>>>>>> 251e2cf68475e8ebb27af2184b9b5ce712d4b517
