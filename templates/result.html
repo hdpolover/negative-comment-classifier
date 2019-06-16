@@ -1,34 +1,42 @@
 {% extends "layout.html" %}
 {% block content %}
 <div class="row">
-        <div class="well well-info">
-          <p>"{{ comment }}" is 
-              {% if pr0 == 0%}
-              not a/an {{ category}}
-              {% else %}
-              a/an {{ category }}
-              {% endif %} comment.
-            </p>
-        </div>
+    <div class="well well-info">
+        {% if category[0] == "i" %}
+        {% set identifier = "an" %}
+        {% elif category[0] == "o" %}
+        {% set identifier = "an" %}
+        {% else %}
+        {% set identifier = "a" %}
+        {% endif %}
+        
+        <p style="text-align: center; font-size: 3vw"><b>"{{ comment }}"</b> is
+            {% if res == 0%}
+            <span style="color:lightseagreen">NOT</span> {{ identifier }} <b>{{ category }}</b>
+            {% else %}
+            {{ identifier }} <span style="color: red"><b>{{ category }}</b></span>
+            {% endif %} comment.
+        </p>
+    </div>
 </div>
 <!-- detail panel -->
 <div class="row">
-  <div class="panel-group">
-      <div class="panel panel-info">
-          <div class="panel-heading">
-              <h4 class="panel-title">
-                  <a data-toggle="collapse" href="#collapse1">See detailed analysis</a>
-              </h4>
-          </div>
-          <div id="collapse1" class="panel-collapse collapse">
-              <div class="panel-body">
-                  <p>
-                          hello i am a collapse panel
-                  </p>
-              </div>
-          </div>
-      </div>
-  </div>
+    <div class="panel-group">
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" href="#collapse1">See detailed analysis</a>
+                </h4>
+            </div>
+            <div id="collapse1" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <p>
+                        hello i am a collapse panel
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
-<button type="button" class="btn btn-info"><a href="{{url_for('clf')}}">Return</a></button>
+<a href="{{url_for('clf')}}" style="width: 20%; height:80%" class="btn btn-primary">Return</a>
 {% endblock %}

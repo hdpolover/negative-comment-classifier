@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,40 +11,58 @@
     <!-- <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}"> -->
     <title>Home</title>
     <style>
-    body,
-    html {
-      overflow-x: hidden
-    }
+        body,
+        html {
+            background-image: url('/static/leaves-pattern.png');
+            overflow-x: hidden
+        }
 
-    body {
-      padding: 60px 20px 0
-    }
+        body {
+            padding: 60px 20px 0
+        }
 
-    footer {
-      border-top: 1px solid #ddd;
-      padding: 30px;
-      margin-top: 50px
-    }
+        footer,
+        .jumbotron,
+        .col-lg-3 {
+            background-color: #B4DFE5;
+            box-shadow: 3px 5px #888888;
+            border-radius: 7px
+        }
 
-    .row>[class*=col-] {
-      margin-bottom: 40px
-    }
+        footer {
+            border-top: 1px solid #ddd;
+            padding: 30px;
+            margin-top: 50px
+        }
+
+        .row>[class*=col-] {
+            margin-bottom: 5vw
+        }
+
+        .panel {
+            padding: 5vw;
+            border: 1px solid;
+            padding: 10px;
+            box-shadow: 3px 5px #888888;
+            border-radius: 7px
+        }
     </style>
 </head>
+
 <body>
     <div class="container">
         <div class="jumbotron jumbotron-fluid">
             <div class="container">
-                <h1>Negative Comment Classifier</h1> 
+                <h1>Negative Comment Classifier</h1>
                 <p>A machine learning web application that classifes texts/comments based on
-                            their level of negativity
-                </p> 
+                    their level of negativity
+                </p>
             </div>
         </div>
 
         <div class="container-fluid">
             <div class="row">
-                <div class="col-lg-3"> 
+                <div class="col-lg-3">
                     <ul class="nav nav-tabs nav-stacked">
                         <li><a href="{{url_for('home')}}">Home</a></li>
                         <li><a href="{{url_for('clf')}}">Classifier</a></li>
@@ -52,18 +71,23 @@
                     </ul>
                 </div>
 
-                <div class="col-lg-9" data-effect="slide-right"> 
-                       {% block content %}
-                       <!-- content here -->
-                       {% endblock %}
+                <div class="col-lg-9" data-effect="slide-right">
+                    <div class="panel">
+                        <div class="panel-body">
+                            {% block content %}
+                            <!-- content here -->
+                            {% endblock %}
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        </div>
 
-    <footer class="container-fluid text-center">
-        <p>&copy; Copyright 2019 2n00bie4U </p>
-        <p>All rights reserved. Made with &#10084;</p>
-    </footer>
+        <footer class="container-fluid text-center">
+            <p>&copy; Copyright 2019 2n00bie4U </p>
+            <p>All rights reserved. Made with &#10084;</p>
+        </footer>
+    </div>
 </body>
+
 </html>
