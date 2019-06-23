@@ -25,3 +25,11 @@ Menentukan algoritma apa yang akan digunakan untuk mengklasifikasi dataset. Apli
 
 Melakukan training atau memberi pengetahuan terhadap algoritma sebelum bisa melakukan prediksi.
 
+* Evaluating the Model
+
+Menggunakan data sample modifikasi dari training set untuk melakukan evaluasi terhadap efektifitas dan efesiensi dari algoritma yang dipilih. Seperti tingkat akurasi dan lama pemrosesan. 
+
+* Making Predictions
+
+Membuat prediksi nyata dengan menggunakan sampel dari test set atau data yang tidak termasuk dalam training set. Input dari web kemudian dapat digunakan untuk melakukan prediksi data baru.
+
