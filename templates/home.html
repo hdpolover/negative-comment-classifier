@@ -1,5 +1,13 @@
 {% extends "layout.html" %}
 {% block content %}
-    <h1>A home</h1>
-    <h2> For you</h2>
+<header class="bg-gradient">
+    <div class="container mt-5">
+        <h1>Negative Comment Classier</h1>
+        <p class="tagline">A machine learning website application that can classify comments/texts based on their
+            level of negativity. </p></br>
+        <a href="{{url_for('categories')}}" class="btn btn-primary">Read More</a>
+    </div>
+    <div class="img-holder mt-3"><img src="{{ url_for('static', filename='images/home.png') }}" alt="people"
+            class="img-fluid"></div>
+</header>
 {% endblock %}

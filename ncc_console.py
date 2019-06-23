@@ -1,5 +1,3 @@
-import time
-start = time.time()
 
 import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer
@@ -7,8 +5,10 @@ from sklearn.model_selection import train_test_split
 from sklearn.svm import LinearSVC
 from sklearn.metrics import accuracy_score
 
+import time
+start = time.time()
 
-df = pd.read_csv("D:\My Projects\gitProjects\\negative-comment-detector\data\comment_data_RAW.csv")
+df = pd.read_csv("data\comment_data_RAW.csv")
 
 df_data = df[["comment_text", "toxic", "severe_toxic", "obscene",
        "threat", "insult", "identity_hate"]]
@@ -26,7 +26,7 @@ x_train, x_test, y_train, y_test = train_test_split(x, df_y, test_size=0.2, rand
 clf = LinearSVC()
 
 #input text
-comment = "he's a stupid young man"
+comment = "fuck you"
 data = [comment]
 vector = vect.transform(data).toarray()
 print("predict text:", data)
@@ -42,8 +42,8 @@ for category in categories:
     #add each category prediction to the list
     new_data.append(prediction)
     print('Prediction:', prediction)
-    accuracy = clf.predict(x_test)      
-    print('Prediction accuracy is {}'.format(accuracy_score(y_test[category], accuracy)))
+    # accuracy = clf.predict(x_test)      
+    # print('Prediction accuracy is {}'.format(accuracy_score(y_test[category], accuracy)))
 
 #print list for the new data
 print(new_data)

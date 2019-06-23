@@ -1,5 +1,49 @@
 {% extends "layout.html" %}
 {% block content %}
-    <h1>About</h1>
-    <h2> For you</h2>
+<header class="bg-gradient">
+    <div class="container mt-5">
+        <h1>About</h1>
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="card pricing popular">
+                    <div class="card-head">
+                        <img src="{{ url_for('static', filename='images/hendrap.jpg') }}" alt="client"
+                            class="client-img">
+                    </div>
+                    <div class="card-body">
+                        <p>
+                            Hendra
+                        </p>
+                        <a href="#" class="btn btn-primary btn-lg btn-block">Choose this Plan</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card pricing popular">
+                    <div class="card-body">
+                        <img src="{{ url_for('static', filename='images/hendrap.jpg') }}" alt="client"
+                            class="client-img">
+                        </br></br>
+                        <p>
+                            Hendra Polover
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card pricing popular">
+                    <div class="card-head">
+                        <img src="{{ url_for('static', filename='images/hendrap.jpg') }}" alt="client"
+                            class="client-img">
+                    </div>
+                    <div class="card-body">
+                        <a href="#" class="btn btn-primary btn-lg btn-block">Choose this Plan</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="img-holder mt-3"><img src="{{ url_for('static', filename='images/home.png') }}" alt="people"
+            class="img-fluid"></div>
+</header>
 {% endblock %}

@@ -1,93 +1,75 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-    <!-- <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}"> -->
-    <title>Home</title>
-    <style>
-        body,
-        html {
-            background-image: url('/static/leaves-pattern.png');
-            overflow-x: hidden
-        }
+    <title>Negative Comment Classifier</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        body {
-            padding: 60px 20px 0
-        }
+    <!-- Font -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500" rel="stylesheet">
 
-        footer,
-        .jumbotron,
-        .col-lg-3 {
-            background-color: #B4DFE5;
-            box-shadow: 3px 5px #888888;
-            border-radius: 7px
-        }
-
-        footer {
-            border-top: 1px solid #ddd;
-            padding: 30px;
-            margin-top: 50px
-        }
-
-        .row>[class*=col-] {
-            margin-bottom: 5vw
-        }
-
-        .panel {
-            padding: 5vw;
-            border: 1px solid;
-            padding: 10px;
-            box-shadow: 3px 5px #888888;
-            border-radius: 7px
-        }
-    </style>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <!-- Themify Icons -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/themify-icons.css') }}">
+    <!-- Owl carousel -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/owl.carousel.min.css') }}">
+    <!-- Main css -->
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
 </head>
 
 <body>
-    <div class="container">
-        <div class="jumbotron jumbotron-fluid">
-            <div class="container">
-                <h1>Negative Comment Classifier</h1>
-                <p>A machine learning web application that classifes texts/comments based on
-                    their level of negativity
-                </p>
-            </div>
-        </div>
 
-        <div class="container-fluid">
+    <!-- Nav Menu -->
+
+    <div class="nav-menu fixed-top bg-gradient">
+        <div class="container">
             <div class="row">
-                <div class="col-lg-3">
-                    <ul class="nav nav-tabs nav-stacked">
-                        <li><a href="{{url_for('home')}}">Home</a></li>
-                        <li><a href="{{url_for('clf')}}">Classifier</a></li>
-                        <li><a href="{{url_for('view')}}">View</a></li>
-                        <li><a href="{{url_for('about')}}">About</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-lg-9" data-effect="slide-right">
-                    <div class="panel">
-                        <div class="panel-body">
-                            {% block content %}
-                            <!-- content here -->
-                            {% endblock %}
+                <div class="col-md-12">
+                    <nav class="navbar navbar-dark navbar-expand-lg">
+                        <a class="navbar-brand" href="{{url_for('home')}}"><img
+                                src="{{ url_for('static', filename='images/neclier.png') }}" class="img-fluid"
+                                alt="logo"></a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar"
+                            aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation"> <span
+                                class="navbar-toggler-icon"></span> </button>
+                        <div class="collapse navbar-collapse" id="navbar">
+                            <ul class="navbar-nav ml-auto">
+                                <li class="nav-item"> <a class="nav-link active" href="{{url_for('home')}}">HOME</a> </li>
+                                <li class="nav-item"> <a class="nav-link active" href="{{url_for('categories')}}">CATEGORIES</a> </li>
+                                <li class="nav-item"> <a class="nav-link active" href="{{url_for('data')}}">DATA</a></li>
+                                <li class="nav-item"> <a class="nav-link active" href="{{url_for('about')}}">ABOUT</a> </li>
+                                <li class="nav-item"><a href="{{url_for('clf')}}"
+                                        class="btn btn-outline-light my-3 my-sm-0 ml-lg-3">Predict</a></li>
+                            </ul>
                         </div>
-                    </div>
+                    </nav>
                 </div>
             </div>
         </div>
+    </div>
 
-        <footer class="container-fluid text-center">
+    {% block content %}
+    <!-- content here -->
+    {% endblock %}
+
+    <footer class="my-5 text-center">
             <p>&copy; Copyright 2019 2n00bie4U </p>
             <p>All rights reserved. Made with &#10084;</p>
-        </footer>
-    </div>
+    </footer>
+
+
+    <!-- jQuery and Bootstrap -->
+    <script src="{{ url_for('static', filename='js/jquery-3.2.1.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+    <!-- Plugins JS -->
+    <script src="{{ url_for('static', filename='js/owl.carousel.min.js') }}"></script>
+    <!-- Custom JS -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
 </body>
 
 </html>

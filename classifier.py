@@ -23,8 +23,8 @@ x_train, x_test, y_train, y_test = train_test_split(
 # make the classifier
 clf = LinearSVC()
 
-categories = ['toxic', 'severe_toxic', 'obscene',
-              'threat', 'insult', 'identity_hate']
+categories = ['identity_hate', 'insult', 'obscene',
+              'threat', 'toxic', 'severe_toxic']
 
 # list for text and predictions
 pr = []  # prediction result
