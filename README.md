@@ -48,3 +48,15 @@ Untuk menjalankan program ini di direktori lokal, Anda harus menginstal beberapa
 ```bash
 git clone https://github.com/hdpolover/negative-comment-classifier.git
 ```
+
+#### Installing Python :
+
+Python dapat diunduh di https://www.python.org/downloads/. Ikuti langkah instalasinya sampai selesai.
+
+#### Installing PIP
+
+PIP dapat diunduh di https://pip.pypa.io/en/stable/installing/ atau dengan menginstallnya melalui console.
+
+```bash
+python install pip 
+```
