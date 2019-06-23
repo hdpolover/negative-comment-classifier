@@ -33,3 +33,11 @@ Menggunakan data sample modifikasi dari training set untuk melakukan evaluasi te
 
 Membuat prediksi nyata dengan menggunakan sampel dari test set atau data yang tidak termasuk dalam training set. Input dari web kemudian dapat digunakan untuk melakukan prediksi data baru.
 
+## Library Yang Dibutuhkan:
+
+* [Pandas](https://pandas.pydata.org/) untuk mengolah dataset menjadi table dataframe yang bisa dibaca.
+* [TfidfVectorizer](https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.TfidfVectorizer.html)   untuk mengubah dataset menjadi vector agar bisa digunakan sebagai input untuk proses prediksi.
+* [Train_test_split](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html) untuk membagi dataset kedalam Training Set dan Test Set serta meminimalisir overfitting atau underfitting dengan mengacak dataset.
+* [LinearSVC](https://scikit-learn.org/stable/modules/generated/sklearn.svm.LinearSVC.html) untuk mengklasifikasi dan memprediksi data. LinearSVC dipilih karena proses eksekusinya lebih cepat dan mampu memisahkan data dengan baik. 
+* [Accuracy_score](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.accuracy_score.html) untuk menghitung akurasi dari hasil prediksi. 
+
