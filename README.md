@@ -60,3 +60,11 @@ PIP dapat diunduh di https://pip.pypa.io/en/stable/installing/ atau dengan mengi
 ```bash
 python install pip 
 ```
+#### Installing Flask
+
+Install Virtual Environment pada direktori yang ingin anda gunakan.
+
+```bash
+python -3 –m venv venv 
+```
+Kemudian unduh Flask di http://flask.pocoo.org/ atau melalui PIP.
