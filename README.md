@@ -41,3 +41,10 @@ Membuat prediksi nyata dengan menggunakan sampel dari test set atau data yang ti
 * [LinearSVC](https://scikit-learn.org/stable/modules/generated/sklearn.svm.LinearSVC.html) untuk mengklasifikasi dan memprediksi data. LinearSVC dipilih karena proses eksekusinya lebih cepat dan mampu memisahkan data dengan baik. 
 * [Accuracy_score](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.accuracy_score.html) untuk menghitung akurasi dari hasil prediksi. 
 
+## Prerequisites:
+
+Untuk menjalankan program ini di direktori lokal, Anda harus menginstal beberapa _tool_ yang dibutuhkan seperti akan dijelaskan dibawah. Namun jika Anda sudah melakukan semuanya, Anda dapat langsung mendownload atau _clone_ repositori ini.
+
+```bash
+git clone https://github.com/hdpolover/negative-comment-classifier.git
+```
