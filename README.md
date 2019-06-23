@@ -68,3 +68,18 @@ Install Virtual Environment pada direktori yang ingin anda gunakan.
 python -3 –m venv venv 
 ```
 Kemudian unduh Flask di http://flask.pocoo.org/ atau melalui PIP.
+
+```bash
+pip install flask
+```
+
+
+
+Setelah semua proses berhasil, jalankan program di direktori dimana anda mengunduh atau _clone_ repositori ini.
+
+```python
+python flask_app.py
+```
+
+Lalu akses http://127.0.0.1:5000 di browser Anda. 
+
