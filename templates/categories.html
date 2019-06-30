@@ -1,20 +1,28 @@
 {% extends "layout.html" %}
 {% block content %}
 <div class="section">
-</br></br>
+    </br></br>
     <div class="container">
 
         <div class="section-title">
-            <small>HIGHLIGHTS</small>
-            <h3>Features you love</h3>
+            <h3>Negative comments</h3>
         </div>
 
         <div class="row">
-            <div class="col-lg-6 offset-lg-6">
-                <h2>Discover our App</h2>
-                <p class="mb-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati vel
-                    exercitationem eveniet vero maxime ratione </p>
-                <a href="#" class="btn btn-primary">Read more</a>
+            <div class="col-lg-6">
+                <img src="{{ url_for('static', filename='images/undraw_chat_1wo5.svg') }}" alt="graphic"
+                    class="img-fluid rounded" style="width: 90%; height: 80%;">
+            </div>
+            <div class="col-lg-6">
+                <p class="mb-4">The internet is a bright place, made dark by internet trolls. At times it seems the
+                    internet is swarming with strangers filled with hate. Especially
+                    on social media. And while that’s probably an exaggeration, for the sake of your mental health you
+                    should try to filter negative comments.</p>
+                <p class="mb-4">
+                    Such comments can adversely impact your online experience or make you want to quit social media.
+                    However, thankfully, you can easily filter negative comments on social media. This application just
+                    gives you an idea of what negative comments are like. You can directly try it <a
+                        href="{{url_for('clf')}}">here</a>.</p>
             </div>
         </div>
 
@@ -26,8 +34,7 @@
 <div class="section light-bg">
     <div class="container">
         <div class="section-title">
-            <small>FEATURES</small>
-            <h3>Do more with our app</h3>
+            <h3>Negative Comment Categories</h3>
         </div>
 
         <ul class="nav nav-tabs nav-justified" role="tablist">
@@ -53,24 +60,11 @@
         <div class="tab-content">
             <div class="tab-pane fade show active" id="communication">
                 <div class="d-flex flex-column flex-lg-row">
-                    <img src="images/graphic.png" alt="graphic"
-                        class="img-fluid rounded align-self-start mr-lg-5 mb-5 mb-lg-0">
                     <div>
-
-                        <h2>Communicate with ease</h2>
-                        <p class="lead">Uniquely underwhelm premium outsourcing with proactive leadership skills.
-                        </p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu
-                            pellentesque pretium, nisi nisi fermentum enim, et sagittis dolor nulla vel sapien.
-                            Vestibulum sit amet mattis ante. Ut placerat dui eu nulla
-                            congue tincidunt ac a nibh. Mauris accumsan pulvinar lorem placerat volutpat. Praesent
-                            quis facilisis elit. Sed condimentum neque quis ex porttitor,
-                        </p>
-                        <p> malesuada faucibus augue aliquet. Sed elit est, eleifend sed dapibus a, semper a eros.
-                            Vestibulum blandit vulputate pharetra. Phasellus lobortis leo a nisl euismod, eu
-                            faucibus justo sollicitudin. Mauris consectetur, tortor
-                            sed tempor malesuada, sem nunc porta augue, in dictum arcu tortor id turpis. Proin
-                            aliquet vulputate aliquam.
+                        <p>Identity hate comments are usually used to mean prejudice towards one or more races.
+                            But in modern use or on social media, these kind of comments are used by people to explain
+                            the behaviour of people of other
+                            races, whether race, beliefs or anything is called into the issue or not.
                         </p>
                     </div>
                 </div>
@@ -78,116 +72,47 @@
             <div class="tab-pane fade" id="schedule">
                 <div class="d-flex flex-column flex-lg-row">
                     <div>
-                        <h2>Scheduling when you want</h2>
-                        <p class="lead">Uniquely underwhelm premium outsourcing with proactive leadership skills.
-                        </p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu
-                            pellentesque pretium, nisi nisi fermentum enim, et sagittis dolor nulla vel sapien.
-                            Vestibulum sit amet mattis ante. Ut placerat dui eu nulla
-                            congue tincidunt ac a nibh. Mauris accumsan pulvinar lorem placerat volutpat. Praesent
-                            quis facilisis elit. Sed condimentum neque quis ex porttitor,
-                        </p>
-                        <p> malesuada faucibus augue aliquet. Sed elit est, eleifend sed dapibus a, semper a eros.
-                            Vestibulum blandit vulputate pharetra. Phasellus lobortis leo a nisl euismod, eu
-                            faucibus justo sollicitudin. Mauris consectetur, tortor
-                            sed tempor malesuada, sem nunc porta augue, in dictum arcu tortor id turpis. Proin
-                            aliquet vulputate aliquam.
+                        <p> An insult is usually when someone says something rude or offensive to another person.
+                            Insults comments are usually used when someone is being annoying, but sometimes are used as
+                            jokes.
+                            These are the expressions of someone's feelings towards others by verbally abusing them.
                         </p>
                     </div>
-                    <img src="images/graphic.png" alt="graphic"
-                        class="img-fluid rounded align-self-start mr-lg-5 mb-5 mb-lg-0">
                 </div>
             </div>
             <div class="tab-pane fade" id="messages">
                 <div class="d-flex flex-column flex-lg-row">
-                    <img src="images/graphic.png" alt="graphic"
-                        class="img-fluid rounded align-self-start mr-lg-5 mb-5 mb-lg-0">
                     <div>
-                        <h2>Realtime Messaging service</h2>
-                        <p class="lead">Uniquely underwhelm premium outsourcing with proactive leadership skills.
-                        </p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu
-                            pellentesque pretium, nisi nisi fermentum enim, et sagittis dolor nulla vel sapien.
-                            Vestibulum sit amet mattis ante. Ut placerat dui eu nulla
-                            congue tincidunt ac a nibh. Mauris accumsan pulvinar lorem placerat volutpat. Praesent
-                            quis facilisis elit. Sed condimentum neque quis ex porttitor,
-                        </p>
-                        <p> malesuada faucibus augue aliquet. Sed elit est, eleifend sed dapibus a, semper a eros.
-                            Vestibulum blandit vulputate pharetra. Phasellus lobortis leo a nisl euismod, eu
-                            faucibus justo sollicitudin. Mauris consectetur, tortor
-                            sed tempor malesuada, sem nunc porta augue, in dictum arcu tortor id turpis. Proin
-                            aliquet vulputate aliquam.
-                        </p>
+                        <p> Obscene comments usually mean vulgar, disgusting, or unappealing comments.
+                            Obscene also means crudely indecent, deficient in taste, delicacy, or refinement. Uncouth.
+                            Sometimes offensive, often used with sexual innuendo's.</p>
                     </div>
                 </div>
             </div>
             <div class="tab-pane fade" id="livechat">
                 <div class="d-flex flex-column flex-lg-row">
                     <div>
-                        <h2>Live chat when you needed</h2>
-                        <p class="lead">Uniquely underwhelm premium outsourcing with proactive leadership skills.
-                        </p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu
-                            pellentesque pretium, nisi nisi fermentum enim, et sagittis dolor nulla vel sapien.
-                            Vestibulum sit amet mattis ante. Ut placerat dui eu nulla
-                            congue tincidunt ac a nibh. Mauris accumsan pulvinar lorem placerat volutpat. Praesent
-                            quis facilisis elit. Sed condimentum neque quis ex porttitor,
-                        </p>
-                        <p> malesuada faucibus augue aliquet. Sed elit est, eleifend sed dapibus a, semper a eros.
-                            Vestibulum blandit vulputate pharetra. Phasellus lobortis leo a nisl euismod, eu
-                            faucibus justo sollicitudin. Mauris consectetur, tortor
-                            sed tempor malesuada, sem nunc porta augue, in dictum arcu tortor id turpis. Proin
-                            aliquet vulputate aliquam.
+                        <p> Threat comments are comments in which someone tells others that they will punish or harm
+                            them, especially if they do
+                            not do what they want. Usually sign the possibility of trouble, danger or disaster. It could
+                            be a person or thing that is likely to cause trouble, danger, etc.
                         </p>
                     </div>
-                    <img src="images/graphic.png" alt="graphic"
-                        class="img-fluid rounded align-self-start mr-lg-5 mb-5 mb-lg-0">
                 </div>
             </div>
             <div class="tab-pane fade" id="toxic">
                 <div class="d-flex flex-column flex-lg-row">
                     <div>
-                        <h2>Scheduling when you want</h2>
-                        <p class="lead">Uniquely underwhelm premium outsourcing with proactive leadership skills.
-                        </p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu
-                            pellentesque pretium, nisi nisi fermentum enim, et sagittis dolor nulla vel sapien.
-                            Vestibulum sit amet mattis ante. Ut placerat dui eu nulla
-                            congue tincidunt ac a nibh. Mauris accumsan pulvinar lorem placerat volutpat. Praesent
-                            quis facilisis elit. Sed condimentum neque quis ex porttitor,
-                        </p>
-                        <p> malesuada faucibus augue aliquet. Sed elit est, eleifend sed dapibus a, semper a eros.
-                            Vestibulum blandit vulputate pharetra. Phasellus lobortis leo a nisl euismod, eu
-                            faucibus justo sollicitudin. Mauris consectetur, tortor
-                            sed tempor malesuada, sem nunc porta augue, in dictum arcu tortor id turpis. Proin
-                            aliquet vulputate aliquam.
+                        <p> Toxic comments usually contain unnecessary hate on an online community or social media.
                         </p>
                     </div>
-                    <img src="images/graphic.png" alt="graphic"
-                        class="img-fluid rounded align-self-start mr-lg-5 mb-5 mb-lg-0">
                 </div>
             </div>
             <div class="tab-pane fade" id="stoxic">
                 <div class="d-flex flex-column flex-lg-row">
                     <div>
-                        <h2>Scheduling when you want</h2>
-                        <p class="lead">Uniquely underwhelm premium outsourcing with proactive leadership skills.
-                        </p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu
-                            pellentesque pretium, nisi nisi fermentum enim, et sagittis dolor nulla vel sapien.
-                            Vestibulum sit amet mattis ante. Ut placerat dui eu nulla
-                            congue tincidunt ac a nibh. Mauris accumsan pulvinar lorem placerat volutpat. Praesent
-                            quis facilisis elit. Sed condimentum neque quis ex porttitor,
-                        </p>
-                        <p> malesuada faucibus augue aliquet. Sed elit est, eleifend sed dapibus a, semper a eros.
-                            Vestibulum blandit vulputate pharetra. Phasellus lobortis leo a nisl euismod, eu
-                            faucibus justo sollicitudin. Mauris consectetur, tortor
-                            sed tempor malesuada, sem nunc porta augue, in dictum arcu tortor id turpis. Proin
-                            aliquet vulputate aliquam.
-                        </p>
+                        <p> Severe toxic comments basically mean comments that are toxic to the next level.
                     </div>
-                    <img src="images/graphic.png" alt="graphic"
-                        class="img-fluid rounded align-self-start mr-lg-5 mb-5 mb-lg-0">
                 </div>
             </div>
         </div>

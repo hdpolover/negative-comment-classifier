@@ -16,26 +16,29 @@
                                 <div class="row">
                                     <div class="col-lg-6">
                                         <div>
-                                            <p style="padding-left: 2vw">Lorem ipsum dolor sit amet consectetur, adipisicing
-                                                elit.
-                                                Obcaecati
-                                                vel
-                                                exercitationem eveniet vero maxime ratione </p>
+                                            <p style="padding-left: 2vw">
+                                                There are 7 categories available to choose from. Each one of them
+                                                classifies
+                                                the comment/text input differently. You can read more about them in
+                                                <a href="{{url_for('categories')}}">categories</a>.</p>
+                                            <p style="padding-left: 2vw">
+                                                However, "All" means that the prediction result will be either
+                                                "negative" or "not negative".
+                                                This category classifies a comment/tex input as "not negative" only if
+                                                the input prediction doesn't fall into any other 6 categories. </p>
                                         </div>
                                     </div>
                                     <div class="col-lg-6">
                                         <form class="forms" action="{{url_for('predi')}}" method="POST">
                                             <div class="form-group">
-                                                <label for="Textarea"
-                                                    class="col control-label">Comment/Text</label>
+                                                <label for="Textarea" class="col control-label">Comment/Text</label>
                                                 <div class="col-lg-12">
                                                     <textarea name="txt" class="form-control" id="Textarea" rows="5"
                                                         placeholder="Write something here..." required></textarea>
                                                 </div>
                                             </div>
                                             <div class="form form-group">
-                                                <label for="categorySelect"
-                                                    class="col control-label">Category</label>
+                                                <label for="categorySelect" class="col control-label">Category</label>
                                                 <div class="col-lg-12">
                                                     <select name="choice" class="form-control" id="categorySelect"
                                                         required>

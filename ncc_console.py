@@ -2,6 +2,7 @@
 import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.model_selection import train_test_split
+from sklearn.model_selection import KFold
 from sklearn.svm import LinearSVC
 from sklearn.metrics import accuracy_score
 
@@ -42,8 +43,8 @@ for category in categories:
     #add each category prediction to the list
     new_data.append(prediction)
     print('Prediction:', prediction)
-    # accuracy = clf.predict(x_test)      
-    # print('Prediction accuracy is {}'.format(accuracy_score(y_test[category], accuracy)))
+    accuracy = clf.predict(x_test)      
+    print('Prediction accuracy is {}'.format(accuracy_score(y_test[category], accuracy)))
 
 #print list for the new data
 print(new_data)
