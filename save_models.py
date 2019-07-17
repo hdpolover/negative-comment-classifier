@@ -27,8 +27,8 @@ x_train, x_test, y_train, y_test = train_test_split(
 
 clf = LinearSVC()
 
-categories = ['toxic', 'severe_toxic', 'obscene',
-              'threat', 'insult', 'identity_hate']
+categories = ['identity_hate', 'insult', 'obscene',
+              'threat', 'toxic', 'severe_toxic']
               
 for category in categories:
     clf.fit(x_train, y_train[category])

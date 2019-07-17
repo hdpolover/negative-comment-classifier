@@ -37,14 +37,14 @@ new_data = [comment]
 
 categories = ['toxic', 'severe_toxic', 'obscene', 'threat', 'insult', 'identity_hate']
 for category in categories:
-    print('... Processing {}'.format(category))
+    print('=> {}'.format(category))
     clf.fit(x_train, y_train[category])
     prediction = clf.predict(vector)
     #add each category prediction to the list
     new_data.append(prediction)
-    print('Prediction:', prediction)
+    print('- Prediction:', prediction)
     accuracy = clf.predict(x_test)      
-    print('Prediction accuracy is {}'.format(accuracy_score(y_test[category], accuracy)))
+    print('- Accuracy: {}'.format(accuracy_score(y_test[category], accuracy)))
 
 #print list for the new data
 print(new_data)

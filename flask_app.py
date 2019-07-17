@@ -38,11 +38,11 @@ def predi():
             return render_template('result.html', comment=comment_text,
                                    category=cat[choice], res=res)
         else:
-            pr0, pa0 = pred(comment_text, choice)
+            pr0 = pred(comment_text, choice)
 
             return render_template('result.html', comment=comment_text,
                                    category=cat[choice],
-                                   res=pr0, a0=pa0)
+                                   res=pr0)
 
 
 @app.route("/about")
